@@ -20,5 +20,3 @@ def missing_statues(sizes):
 
     missing = total_statues - len(unique_sizes)
     return missing
-
-print(missing_statues([1, 2, 3, 4]), missing_statues([1, 2, 3, 4]))
