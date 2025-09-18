@@ -18,5 +18,6 @@ def check_guess(secret, guess):
 
 
 secret = generate_secret_number()
+
 print(secret)
 print(check_guess(secret, generate_secret_number()))
