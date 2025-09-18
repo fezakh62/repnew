@@ -1,5 +1,9 @@
+import random
+
 def generate_secret_number():
-    return "3219"
+    digits = list("0123456789")
+    random.shuffle(digits)
+    return ''.join(digits[:4])
 
 
 def check_guess(secret, guess):
@@ -13,5 +17,6 @@ def check_guess(secret, guess):
     return bulls, cows
 
 
-print(generate_secret_number())
-print(check_guess(generate_secret_number(), generate_secret_number()))
+secret = generate_secret_number()
+print(secret)
+print(check_guess(secret, generate_secret_number()))
