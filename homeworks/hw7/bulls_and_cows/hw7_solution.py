@@ -1,23 +1,26 @@
 import random
 
+
 def generate_secret_number():
+
+
     digits = list("0123456789")
     random.shuffle(digits)
     return ''.join(digits[:4])
 
 
-def check_guess(secret, guess):
+def check_guess(SECRET, guess):
     bulls = 0
     cows = 0
     for i in range(4):
-        if guess[i] == secret[i]:
+        if guess[i] == SECRET[i]:
             bulls += 1
-        elif guess[i] in secret:
+        elif guess[i] in SECRET:
             cows += 1
     return bulls, cows
 
 
-secret = generate_secret_number()
+SECRET = generate_secret_number()
 
-print(secret)
-print(check_guess(secret, generate_secret_number()))
+print(SECRET)
+print(check_guess(SECRET, generate_secret_number()))
