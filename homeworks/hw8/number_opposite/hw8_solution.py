@@ -1,3 +1,2 @@
-def number_opposite(n, first):
-    opposite = (first + n // 2) % n
-    return opposite
+def number_opposite(n, f_number):
+    return (f_number + n // 2) % n
